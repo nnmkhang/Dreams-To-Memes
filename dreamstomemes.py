@@ -1,13 +1,15 @@
 import os.path
 import praw
-import urllib
+import urllib.request
 print("\n")
 
 #username: memestodreams1   
 #password: 123456
-#client id: MbP-ITqzQxx-SA
+#client id: xbN4kVxAil3Sng
 #secret: rNhq65-IYUnIVlfdiBTNfhOdiJ8
 
+
+#"C:\\Users\\nnmkh\\Desktop\\memes\\"
 def downloadURL(url): # function downloads the url specified to a folder
     picUrl = url
     picName = url.split("/")[-1]
@@ -31,13 +33,22 @@ print(directory)
 
 
 
-reddit = praw.Reddit(client_id = "MbP-ITqzQxx-SA",
-                     client_secret = "rNhq65-IYUnIVlfdiBTNfhOdiJ8",
+reddit = praw.Reddit(client_id = "xbN4kVxAil3Sng",
+                     client_secret = "wkRHF4kpJllOg2-HdjXwQyNyOtw",
                      username = "memestodreams1",
-                     password = "123466",
+                     password = "123456",
                      user_agent = "memestodreamsscript" )
 
-sub = reddit.subreddit('greentext').top(limit=1)
+sub = reddit.subreddit('greentext').top(time_filter= "all", limit =None)[10] 
+ # no idea why it wont work without using the for itteration
+for x in sub:
+    print(x.title)
+    print(x.url)
+    filename = (directory+x.title.replace(" ","_")+".jpg")
+    print(filename)
+    urllib.request.urlretrieve(x.url,filename)
 
-print(sub.__doc__)
-                
+    #https://www.reddit.com/r/redditdev/comments/5k9zui/how_to_get_nth_most_upvoted_post_in_a_subreddit/?st=jk0fj5vi&sh=775b4848
+    #got downloading working, now gotta get random images, use rand num gen, and
+    # then just get that post num.
+    # after use the OCR To transfer to string and write it to a file 
