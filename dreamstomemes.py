@@ -26,6 +26,7 @@ def downloadURL(url): # function downloads the url specified to a folder
 
 print("test")
 directory = input("Where to download?")
+print(directory)
 
 
 
@@ -35,4 +36,8 @@ reddit = praw.Reddit(client_id = "MbP-ITqzQxx-SA",
                      username = "memestodreams1",
                      password = "123466",
                      user_agent = "memestodreamsscript" )
-                    
+
+sub = reddit.subreddit('greentext').top(limit=1)
+
+print(sub.__doc__)
+                
