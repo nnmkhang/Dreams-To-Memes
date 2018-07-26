@@ -2,6 +2,8 @@ import os.path
 import praw
 import urllib.request
 import random
+from PIL import Image
+from pytesseract import *
 print("\n")
 
 #username: memestodreams1   
@@ -53,6 +55,10 @@ print(sub.url)
 filename = (directory+sub.title.replace(" ","_")+".jpg")
 print(filename)
 urllib.request.urlretrieve(sub.url,filename)
+
+im = Image.open(filename)
+text = image_to_string(im, lang= "eng")
+print(text)
 
     #https://www.reddit.com/r/redditdev/comments/5k9zui/how_to_get_nth_most_upvoted_post_in_a_subreddit/?st=jk0fj5vi&sh=775b4848
     #got downloading working, now gotta get random images, use rand num gen, and 
