@@ -4,6 +4,7 @@ import urllib.request
 import random
 from PIL import Image
 from pytesseract import *
+import re
 print("\n")
 
 #username: memestodreams1   
@@ -47,7 +48,7 @@ reddit = praw.Reddit(client_id = "xbN4kVxAil3Sng",
                      password = "123456",
                      user_agent = "memestodreamsscript" )
 
-sub = list(reddit.subreddit('greentext').top(time_filter= "all", limit =100))[rand] 
+sub = list(reddit.subreddit('greentext').top(time_filter= "all", limit =100))[87] 
  
 
 print(sub.title)
@@ -58,7 +59,12 @@ urllib.request.urlretrieve(sub.url,filename)
 
 im = Image.open(filename)
 text = image_to_string(im, lang= "eng")
+#print(text) 
+text = text.replace("1","I")
+text = text.replace("|","I")
 print(text)
+# need to go thru the text and make it look better 
+
 
     #https://www.reddit.com/r/redditdev/comments/5k9zui/how_to_get_nth_most_upvoted_post_in_a_subreddit/?st=jk0fj5vi&sh=775b4848
     #got downloading working, now gotta get random images, use rand num gen, and 
