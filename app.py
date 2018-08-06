@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html") #by returning the template from the template folder called index html we open that template.
 @app.route('/cakes')
 def cakes():
     return 'yummy cakes'
