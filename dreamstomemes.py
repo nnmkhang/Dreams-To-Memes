@@ -34,7 +34,8 @@ def downloadURL(url): # function downloads the url specified to a folder
 # gets a random number between 1 and 100 
 rand = random.randint(1,100)
 
-
+#/home/pi/Desktop/Dreams-To-Memes/
+# this one is set to inside the project folder
 print("test")
 directory = input("Where to download?")
 print(directory)
@@ -48,7 +49,7 @@ reddit = praw.Reddit(client_id = "xbN4kVxAil3Sng",
                      password = "123456",
                      user_agent = "memestodreamsscript" )
 
-sub = list(reddit.subreddit('greentext').top(time_filter= "all", limit =100))[87] 
+sub = list(reddit.subreddit('greentext').top(time_filter= "all", limit =100))[rand] 
  
 
 print(sub.title)

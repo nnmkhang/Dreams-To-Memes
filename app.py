@@ -8,6 +8,7 @@ def index():
 def cakes():
     return 'yummy cakes'
 
+#to access from another pc, type the ip of the pi ( 192.168.0.2:5000/)
 
 
 if __name__ == '__main__':
