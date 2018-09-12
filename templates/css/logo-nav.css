@@ -7,9 +7,19 @@
 body {
   padding-top: 54px;
 }
+.center-fixed{
+  position: fixed;
+  top:35%;
+  left:25%;
+  width: 1000px;
+  padding-top: 15px;
+  height: 60px;
 
+}
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
   }
 }
+
+
