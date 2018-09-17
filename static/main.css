@@ -1,5 +1,7 @@
 
  body {
+    margin: auto;
+    width:  50%;
     padding-top: 54px;
     color:  red;
     background : yellow;
@@ -12,11 +14,6 @@
   
   
   }
-  @media (min-width: 992px) {
-    body {
-      padding-top: 56px;
-    }
-  }
-  
+ 
   
   
