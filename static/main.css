@@ -3,12 +3,11 @@
     padding-top: 54px;
     color:  red;
   }
-  .center-fixed{
-    position: fixed;
-    top:35%;
-    left:25%;
-    width: 1000px;
-    padding-top: 15px;
+  .center{
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
   
   
   }
