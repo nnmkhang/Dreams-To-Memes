@@ -2,6 +2,7 @@
  body {
     padding-top: 54px;
     color:  red;
+    background : yellow;
   }
   .center{
     margin: auto;
