@@ -3,14 +3,30 @@
 
   <head>
     <title>Pi Server</title>
-    <link href="/static/main.css" rel="stylesheet">
+    <link href="../static/main.css" rel="stylesheet">
+
+    
   </head>
 
   <body>
+    
+    <form id = "form" method="POST" action="http://localhost:5000/result">
+    Link: <input name = "link" type = "text" size = "20" class = "input_textbox" placeholder="Paste Link Here"
+    value="test">
+    <span><input type = "submit" value = "Print" /> </span>
+    </form>
+   
+
 
     <h1> hello </h1>
-   
+    <p id = "demo"></p>
 
   </body>
 
 </html>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>  
+
+<script src = "../static/rpi_transmit.js"></script>

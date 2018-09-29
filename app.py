@@ -1,9 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request,url_for,redirect,flash
+import sys
 app = Flask(__name__)
+app.secret_key = "some_secret"
 
 @app.route('/')
 def index():
     return render_template("index.html") #by returning the template from the template folder called index html we open that template.
+    # can return variable names by using {{ }}
+
+@app.route('/result', methods = ["POST", 'GET'])
+def result():
+    if(request.method == 'POST'):
+        result = request.form['link']
+        return render_template("result.html", result = result)
+
+
 @app.route('/cakes')
 def cakes():
     return 'yummy cakes'
