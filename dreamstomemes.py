@@ -41,7 +41,6 @@ def dreamstomemes():
 
 
 
-
     reddit = praw.Reddit(client_id = "xbN4kVxAil3Sng",
                         client_secret = "wkRHF4kpJllOg2-HdjXwQyNyOtw",
                         username = "memestodreams1",
