@@ -36,7 +36,7 @@ def dreamstomemes():
     #/home/pi/Desktop/Dreams-To-Memes/
     # this one is set to inside the project folder
     print("test")
-    directory = "C:\\users\\nnmkh\\Desktop\\memes\\"
+    directory = "C:\\Code\\Python\\Dreams-To-Memes\\static\\img\\"
     print(directory)
 
 
@@ -52,7 +52,7 @@ def dreamstomemes():
 
     print(sub.title)
     print(sub.url)
-    filename = (directory+sub.title.replace(" ","_")+".jpg")
+    filename = (directory+"meme"+".jpg")
     print(filename)
     urllib.request.urlretrieve(sub.url,filename)
 

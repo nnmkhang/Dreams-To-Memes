@@ -3,27 +3,22 @@
 
   <head>
     <title>Pi Server</title>
-    <link href="../static/main.css" rel="stylesheet">
-
-    
+    <link type = "text/css" href="../static/main.css" rel="stylesheet">
   </head>
 
   <body>
     
-    <form id = "form" method="POST" action="http://localhost:5000/recipereceipt">
-    <span><input type = "submit" value = "recipe" /> </span>
+    <div>
+    <form  class = "button1" id = "form" method="POST" action="http://localhost:5000/recipereceipt">
+      <span><input type = "submit" value = "recipe" /> </span>
     </form>
 
-
-
-    <form id = "form" method="POST" action="http://localhost:5000/dreamstomemes">
+    <form class = "button2"id = "form" method="POST" action="http://localhost:5000/dreamstomemes">
       <span><input type = "submit" value = "Generate Memes" /> </span>
     </form>
-   
+  </div>
 
 
   </body>
 
 </html>
-
-<script src = "../static/rpi_transmit.js"></script>
