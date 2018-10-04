@@ -62,6 +62,7 @@ def dreamstomemes():
     text = text.replace("1","I")
     text = text.replace("|","I")
     print(text)
+    return(sub.url)
     # need to go thru the text and make it look better 
 
 

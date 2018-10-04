@@ -28,8 +28,8 @@ def result():
 @app.route('/dreamstomemes_result',methods = ["POST","GET"])
 def dreams_result():
     if(request.method == 'POST'):
-        dreamstomemes.dreamstomemes()
-        return render_template("dreams_to_memes_result.html")
+        picture = dreamstomemes.dreamstomemes()
+        return render_template("dreams_to_memes_result.html",picture = picture)
 
 
 @app.route('/cakes')
